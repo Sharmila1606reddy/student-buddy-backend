@@ -81,7 +81,9 @@ app.use(cors());
 app.use(express.json());
 
 const PORT = process.env.PORT || 3001;
-console.log("🚀 Student Buddy Intelligent AI running on port 3001");
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+});
 function extractDominantTopics(weightedProfile) {
   if (!weightedProfile) return [];
 
